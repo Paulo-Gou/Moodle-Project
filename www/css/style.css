@@ -1,0 +1,75 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.home {
+    background-color: white;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #000;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #047baa;
+    color: white;
+}
+
+
+#bannerimage {
+    width: 100%;
+     background-image: url(https://img.freepik.com/free-photo/office-supplies-lie-pink-background-study-school-rainbow-color_292052-300.jpg?w=2000); 
+    height: 905px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    display: flex;
+    align-items:center;
+  }
+  .clock {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  
+  }
+  
+  .time {
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+  
+  .date-time {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .time {
+      font-size: 50px;
+    }
+  }
+

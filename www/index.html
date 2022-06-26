@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt"></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moodle but bad</title>
+    <link rel="icon" type="image/icon" href="images/cursor.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a href="/index" class="ativo">Início</a>
+            <a href="/gestao">Gestão</a>
+            <a href="/informacao">Informação</a>
+            <a href="/revisao">Revisões</a>
+            <a href="/sobre">Sobre</a>
+        </div>
+    </header>
+    <div id="bannerimage">
+        <div class="clock">
+            <div class="time"></div>
+            <div class="date-time"></div>
+          </div>
+
+    </div>
+  
+      <script>
+        var time = document.querySelector('.time');
+        var dateTime = document.querySelector('.date-time');
+    
+        function updateClock() {
+          // Get the current time, day , month and year
+          var now = new Date();
+          var hours = now.getHours();
+          var minutes = now.getMinutes();
+          var seconds = now.getSeconds();
+          var day = now.getDay();
+          var date = now.getDate();
+          var month = now.getMonth();
+          var year = now.getFullYear();
+    
+          // store day and month name in an array
+          var dayNames = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+          var monthNames = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Hunho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    
+          // format date and time
+        
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          date = date < 10 ? '0' + date : date;
+    
+          // display date and time
+          
+          time.innerHTML = hours + ':' + minutes + ':' + seconds + ' ' ;
+          dateTime.innerHTML = dayNames[day] + ', ' + date + ' ' + monthNames[month] + ', ' + year;
+        }
+    
+        updateClock();
+        setInterval(updateClock, 1000);
+      </script>
+    
+</body>
